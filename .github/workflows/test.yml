@@ -16,7 +16,7 @@ jobs:
       run: |
         echo ::set-output name=go-version::$(sed 's/^.*://' .github/go/Dockerfile)
     -
-      uses: actions/setup-go@v2
+      uses: actions/setup-go@v3
       id: setup-go
       with:
         go-version: ${{ steps.go-version.outputs.go-version }}
